@@ -1,0 +1,55 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- user_wants_to_order
+- user_does_not_want_to_order
+- user_chose_restaurant
+- user_chose_food_items
+responses:
+  utter_greet:
+  - buttons:
+    - payload: Yes I would like to order
+      title: Yes
+    - payload: No need
+      title: No
+    text: Hi Hope you are safe and sound. Would you like to order some food?
+  utter_display_restaurant:
+  - buttons:
+    - payload: I would like to order from 7 Plates
+      title: 7 plates
+    - payload: I would like to order from Anugraha Veg
+      title: Anugraha veg
+    text: Please select/type the restaurant name
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_thanking_message:
+  - text: Absolutely okay no issues buddy! Call me whenever you would like to order
+  - text: Well, it's your wish! But do let me know if you would like to order sometime
+  utter_iamabot:
+  - text: I am a bot, powered by the MAD.
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- display_food_menu
+- utter_display_restaurant
+- order_received_from_user
+- utter_thanking_message
